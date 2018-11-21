@@ -23,7 +23,7 @@ class StateLog(models.Model):
     transition = models.CharField(max_length=255)
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField(db_index=True)
+    object_id = models.CharField(db_index=True,max_length=100)
     content_object = GenericForeignKey('content_type', 'object_id')
 
     description = models.TextField(blank=True)
