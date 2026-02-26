@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str as force_text
 from django.utils.timezone import now
 from django_fsm import FSMFieldMixin, FSMIntegerField
 
